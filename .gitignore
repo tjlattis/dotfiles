@@ -1,0 +1,5 @@
+~/repos/dotfiles/.gitignore
+
+.DS_Store
+.idlerc/recent-files.lst
+.idlerc/breakpoints.lst
