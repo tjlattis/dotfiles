@@ -1,5 +1,5 @@
 # general cross platform bash aliases
-alias up='cd ..'
+
 alias h='history'
 alias get='curl -OL'
 alias g='grep -i'
@@ -12,6 +12,15 @@ alias rm='rm -i'
 alias df='df -h'
 alias du='du -h'
 alias mkdir='mkdir -p'
+alias sudo='sudo '
+
+# aliases for cd
+alias up='cd ..'
+# test alias dc='cd ~/Documents'
+alias d="cd ~/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/programs"
 
 # git aliases [expiramental]
 # alias gitc='git commit -am' 
