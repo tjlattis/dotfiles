@@ -19,12 +19,30 @@ alias mkdir='mkdir -p'
 # test this one
 alias ip='ifconfig | grep inet  | grep -v 127.0.0.1'
 
+# these are Darwin aliases
 if [ "$(uname)" == "Darwin" ]; then
-  # these are Darwin aliases
+  
+  # to open things 
   alias timer="open /Applications/Timer.app"
   alias dog="open ~/Pictures/dogs/*"
   alias browser="open /Applications/qutebrowser.app"
   alias htop='sudo htop'
+  alias firefox="open -a ~/Applications/Firefox.app" # source: github.com/webpro/dotfiles
+  
+  # for command abreviations
+  alias cpwd="pwd|tr -d '\n'|pbcopy"
+  alias cask="brew cask" # source: webpro/dotfiles
+  alias zip="zip -x *.DS_Store -x *__MACOSX* -x *.AppleDouble*" # source: github.com/webpro/dotfiles
+  
+  # to perform tasks
+  alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder" # source: github.com/webpro/dotfiles
+  alias afk="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine" # source: github.com/webpro/dotfiles
+  alias desktopshow="defaults write com.apple.finder CreateDesktop -bool true && killfinder" # source: github.com/webpro/dotfiles
+  alias desktophide="defaults write com.apple.finder CreateDesktop -bool false && killfinder" # source: github.com/webpro/dotfiles
+  alias cleanupds="find . -type f -name '*.DS_Store' -ls -exec /bin/rm {} \;" # source: github.com/webpro/dotfiles
+  alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;" # source: github.com/webpro/dotfiles
+
+  
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   # puts Linux specific aliases
 fi
