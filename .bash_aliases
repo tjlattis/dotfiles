@@ -50,8 +50,8 @@ if [ "$(uname)" == "Darwin" ]; then
   alias desktophide="defaults write com.apple.finder CreateDesktop -bool false && killfinder" # source: github.com/webpro/dotfiles
   alias cleanupds="find . -type f -name '*.DS_Store' -ls -exec /bin/rm {} \;" # source: github.com/webpro/dotfiles
   alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;" # source: github.com/webpro/dotfiles
-
-  
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-  # puts Linux specific aliases
 fi
+  
+# if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+#  # puts Linux specific aliases
+#fi
