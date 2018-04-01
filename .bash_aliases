@@ -52,6 +52,6 @@ if [ "$(uname)" == "Darwin" ]; then
   alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;" # source: github.com/webpro/dotfiles
 fi
   
-# if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-#  # puts Linux specific aliases
-#fi
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  alias lastbegeo="sudo lastb | head -n -2 | cut -c 23-38 | xargs -n1 geoiplookup | cut -c 24- | sort | uniq -c | sort -nr"
+fi
