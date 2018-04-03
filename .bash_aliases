@@ -23,7 +23,7 @@ alias dt="cd ~/Desktop"
 alias p="cd ~/programs"
 
 # git aliases [expiramental]
-# alias gitc='git commit -am' 
+alias gitc='git commit -am' 
 
 # test this one
 alias ip='ifconfig | grep inet  | grep -v 127.0.0.1'
@@ -53,5 +53,8 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
   
 if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+  alias maninstalls='comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n "s/^Package: //p" | sort -u)'
   alias lastbegeo="sudo lastb | head -n -2 | cut -c 23-38 | xargs -n1 geoiplookup | cut -c 24- | sort | uniq -c | sort -nr"
 fi
