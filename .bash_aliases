@@ -23,7 +23,7 @@ alias dt="cd ~/Desktop"
 alias p="cd ~/programs"
 
 # git aliases [expiramental]
-# alias gitc='git commit -am' 
+alias gitc='git commit -am' 
 
 # test this one
 alias ip='ifconfig | grep inet  | grep -v 127.0.0.1'
