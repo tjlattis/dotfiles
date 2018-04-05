@@ -52,7 +52,7 @@ if [ "$(uname)" == "Darwin" ]; then
   alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;" # source: github.com/webpro/dotfiles
 fi
   
-if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+if [ "$(uname)" == "Linux" ]; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
   alias maninstalls='comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n "s/^Package: //p" | sort -u)'
