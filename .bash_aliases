@@ -12,6 +12,7 @@ alias rm='rm -i'
 alias df='df -h'
 alias du='du -h'
 alias mkdir='mkdir -p'
+alias cln='clear && '
 alias sudo='sudo '
 
 # aliases for cd
