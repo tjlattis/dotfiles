@@ -20,3 +20,5 @@ set noerrorbells
 set nostartofline
 " Show the cursor position
 set ruler
+
+colorscheme gruvbox 

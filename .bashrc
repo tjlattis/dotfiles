@@ -1,10 +1,10 @@
-export USER="Tony"
+export USER="tony"
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PS1="\[\033[38;5;60m\]\u\[$(tput sgr0)\]\[\033[38;5;66m\]@\[$(tput sgr0)\]\[\033[38;5;137m\]\h\[$(tput sgr0)\]\[\033[38;5;66m\]:\w\[$(tput sgr0)\]\[\033[38;5;40m\]\$(parse_git_branch)\[$(tput sgr0)\]\[\033[38;5;66m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;60m\]\u\[$(tput sgr0)\]\[\033[38;5;66m\]@\[$(tput sgr0)\]\[\033[38;5;221m\]\h\[$(tput sgr0)\]\[\033[38;5;66m\]:\w\[$(tput sgr0)\]\[\033[38;5;70m\]\$(parse_git_branch)\[$(tput sgr0)\]\[\033[38;5;66m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
 # CLI Color
 
@@ -23,7 +23,7 @@ export HISTCONTROL=ignoreboth 		#ignoredups:ignorespace
 export HISTTIMEFORMAT='%b %d %I:%M %p '	#using strftime format
 
 # GREP_COLOR codes
-# Attributes: 	Text color:	Backhround:
+# Attributes: 	Text color:	Background:
 #   0 reset all	  30 black	  40 black
 #   1 bright	  31 red	  41 red
 #   2 dim	  32 green	  42 green
