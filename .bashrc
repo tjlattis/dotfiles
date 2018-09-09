@@ -1,11 +1,10 @@
-export USER="Tony"
+export USER="tony"
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 export PS1="\[\033[38;5;21m\]\u\[$(tput bold)\]\[\033[38;5;8m\]@\[$(tput bold)\]\[\033[38;5;202m\]\h\[$(tput bold)\]\[\033[38;5;8m\]:\w\[$(tput sgr0)\]\[\033[38;5;40m\]\$(parse_git_branch)\[$(tput sgr0)\]\[\033[38;5;8m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-
 
 # CLI Color
 
@@ -24,7 +23,7 @@ export HISTCONTROL=ignoreboth 		#ignoredups:ignorespace
 export HISTTIMEFORMAT='%b %d %I:%M %p '	#using strftime format
 
 # GREP_COLOR codes
-# Attributes: 	Text color:	Backhround:
+# Attributes: 	Text color:	Background:
 #   0 reset all	  30 black	  40 black
 #   1 bright	  31 red	  41 red
 #   2 dim	  32 green	  42 green
@@ -40,13 +39,14 @@ export GREP_OPTIONS="--color=auto"
 
 # PATH Settings
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH"
+#export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH"
 
 # Setting PATH for Python 3.5
 # The original version is saved in .bash_profile.pysave
 # old path PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
 
-PYTHONPATH="/usr/local/Cellar/python3/3.6.2:$PYTHONPATH"
-export PYTHONPATH
+#PYTHONPATH="/usr/local/Cellar/python3/3.6.2:$PYTHONPATH"
+#export PYTHONPATH
+
 . /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 . /usr/local/etc/profile.d/z.sh

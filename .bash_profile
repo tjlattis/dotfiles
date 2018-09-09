@@ -8,3 +8,4 @@ fi
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
