@@ -20,5 +20,7 @@ set noerrorbells
 set nostartofline
 " Show the cursor position
 set ruler
+" make backspace work
+set backspace=indent,eol,start
 
 colorscheme gruvbox 

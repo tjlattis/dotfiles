@@ -4,11 +4,14 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PS1="\[\033[38;5;21m\]\u\[$(tput bold)\]\[\033[38;5;8m\]@\[$(tput bold)\]\[\033[38;5;202m\]\h\[$(tput bold)\]\[\033[38;5;8m\]:\w\[$(tput sgr0)\]\[\033[38;5;40m\]\$(parse_git_branch)\[$(tput sgr0)\]\[\033[38;5;8m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
 # CLI Color
 
 export CLICOLOR=1
+
+if [ -f ~/.bash_prompt ]; then
+		. ~/.bash_prompt
+fi
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

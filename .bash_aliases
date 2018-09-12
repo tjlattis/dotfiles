@@ -59,3 +59,6 @@ if [ "$(uname)" == "Linux" ]; then
   alias maninstalls='comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n "s/^Package: //p" | sort -u)'
   alias lastbegeo="sudo lastb | head -n -2 | cut -c 23-38 | xargs -n1 geoiplookup | cut -c 24- | sort | uniq -c | sort -nr"
 fi
+
+# print 256 pallet
+alias ls256='for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done'
